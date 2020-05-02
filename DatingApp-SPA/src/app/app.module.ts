@@ -36,6 +36,8 @@ import { UserService } from './_services/user.service';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TimeAgoPipe } from 'time-ago-pipe';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -59,6 +61,7 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     MemberDetailComponent,
     MemberEditComponent,
     PhotoEditorComponent,
+    MemberMessagesComponent,
     TimeAgoExtendsPipe,
   ],
   imports: [
@@ -93,6 +96,7 @@ export class TimeAgoExtendsPipe extends TimeAgoPipe {}
     MemberListResolver,
     MemberEditResolver,
     ListsResolver,
+    MessagesResolver,
     PreventUnsavedChanges,
   ],
   bootstrap: [AppComponent],
